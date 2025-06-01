@@ -20,7 +20,7 @@ import {
   Timeline as TimelineIcon,
 } from '@mui/icons-material';
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   // TODO: Get stats from backend
   const stats = {
     activeDrivers: 12,
