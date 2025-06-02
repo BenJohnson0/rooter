@@ -55,21 +55,6 @@ A system for optimizing delivery routes using manifest data, with features for f
    flask run
    ```
 
-## Environment Variables
-
-### Frontend (.env)
-```
-REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
-REACT_APP_API_URL=http://localhost:5000
-```
-
-### Backend (.env)
-```
-GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
-DATABASE_URL=sqlite:///rooter.db
-FLASK_ENV=development
-FLASK_APP=app.py
-```
 
 ## Security Notes
 - Never commit `.env` files to version control
