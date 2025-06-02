@@ -1,6 +1,80 @@
-# Rooter - Delivery Route Optimization System
+# Rooter - Route Optimization System
 
-Rooter is a business-first system designed to streamline the delivery process by optimizing routes for delivery drivers and companies. The system processes manifest data and generates the most efficient delivery routes, saving time, fuel, and costs.
+A system for optimizing delivery routes using manifest data, with features for file uploads and Google Maps integration.
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js and npm
+- Python 3.8+
+- Google Maps API key
+
+### Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd rooter
+   ```
+
+2. **Set up environment variables**
+
+   Frontend:
+   - Copy `frontend/.env.example` to `frontend/.env`
+   - Add your Google Maps API key to `frontend/.env`
+
+   Backend:
+   - Copy `backend/.env.example` to `backend/.env`
+   - Add your Google Maps API key to `backend/.env`
+
+3. **Install dependencies**
+
+   Frontend:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+   Backend:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
+
+4. **Start the development servers**
+
+   Frontend:
+   ```bash
+   cd frontend
+   npm start
+   ```
+
+   Backend:
+   ```bash
+   cd backend
+   flask run
+   ```
+
+## Environment Variables
+
+### Frontend (.env)
+```
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+REACT_APP_API_URL=http://localhost:5000
+```
+
+### Backend (.env)
+```
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
+DATABASE_URL=sqlite:///rooter.db
+FLASK_ENV=development
+FLASK_APP=app.py
+```
+
+## Security Notes
+- Never commit `.env` files to version control
+- Keep your API keys secure and don't share them publicly
+- Use environment variables for all sensitive configuration
 
 ## Features
 
@@ -28,45 +102,6 @@ rooter/
 ├── frontend/         # React frontend
 ├── docs/            # Documentation
 └── tests/           # Test files
-```
-
-## Setup Instructions
-
-1. Clone the repository
-2. Set up the backend:
-   ```bash
-   cd backend
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-3. Set up the frontend:
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-4. Configure environment variables:
-   - Create `.env` files in both backend and frontend directories
-   - Add required API keys (Google Maps, etc.)
-
-5. Run the development servers:
-   - Backend: `python run.py`
-   - Frontend: `npm start`
-
-## Environment Variables
-
-### Backend (.env)
-```
-GOOGLE_MAPS_API_KEY=your_api_key
-DATABASE_URL=your_database_url
-```
-
-### Frontend (.env)
-```
-REACT_APP_GOOGLE_MAPS_API_KEY=your_api_key
-REACT_APP_API_URL=http://localhost:5000
 ```
 
 ## Contributing
